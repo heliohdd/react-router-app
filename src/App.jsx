@@ -2,9 +2,11 @@ import './App.css'
 
 import { BrowserRouter, Routes, Route} from "react-router-dom"
 
+import Navbar from './components/Navbar'
+
 import Home from './pages/Home'
 import About from './pages/About'
-import Navbar from './components/Navbar'
+import Product from './pages/Product'
 
 function App() {
   return (
@@ -14,9 +16,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/product/:id' element={<Product />} />
         <Route path='/about' element={<About />} />
-        {/* <Route path='/login' element {<Login />} />
-        <Route path='/register' element {<Cadastro />} /> */}
       </Routes>
       </BrowserRouter>
     </div>
