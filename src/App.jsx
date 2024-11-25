@@ -1,6 +1,6 @@
 import './App.css'
 
-import { BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 import Navbar from './components/Navbar'
 import SearchForm from './components/SearchForm'
@@ -26,6 +26,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path="*" element={<NotFound />} />
         <Route path='/search' element={<Search />} />
+        <Route path='/company' element={<Navigate to="/about" />} />
       </Routes>
       </BrowserRouter>
     </div>
